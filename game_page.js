@@ -4,14 +4,14 @@ player2_name = localStorage.getItem("player2_name");
 player1_score = 0;
 player2_score = 0;
 
-document.getElementById("player1_name").ineerHTML = player1_name + " : ";
-document.getElementById("player1_name").ineerHTML = player1_name + " : "
+document.getElementById("player1_name").innerHTML = player1_name + " : ";
+document.getElementById("player1_name").innerHTML = player1_name + " : "
 
-document.getElementById("player1_score").ineerHTML = player1_score ;
-document.getElementById("player2_score").ineerHTML = player2_score ;
+document.getElementById("player1_score").innerHTML = player1_score ;
+document.getElementById("player2_score").innerHTML = player2_score ;
 
-document.getElementById("player_question") = "Turno De Pergunta - " + player1_name;
-document.getElementById("player_answer") = "Turno De resposta - " + player1_name;
+document.getElementById("player_question").innerHTML = "Turno De Pergunta - " + player1_name;
+document.getElementById("player_answer").innerHTML = "Turno De resposta - " + player1_name;
 
 function send() {
     get_word = document.getElementById("word").value;
@@ -25,7 +25,7 @@ function send() {
     charAt2 = word.charAt(length_divide_2);
     console.log(charAt2);
 
-    length_minus_1 = word.legthe - 1;
+    length_minus_1 = word.length - 1;
     charAt3 = word.charAt(length_minus_1);
     console.log(charAt3);
 
@@ -37,6 +37,6 @@ function send() {
     input_box = "<br>Resposta : <input type 'text' id='input_check_box'>";
     check_button = "<br><br><button class='btn btn-info' oneclick='check()'>verificar</button>";
     row = question_word + input_box + check_button;
-    document.getElementById("output").ineerHTML = row;
+    document.getElementById("output").innerHTML = row;
     document.getElementById("word").value = "";
 }
